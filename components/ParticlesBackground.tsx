@@ -30,27 +30,23 @@ const App = () => {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
+  const particlesLoaded = async (container?: Container): Promise<void> => {};
 
   const options: ISourceOptions = useMemo(
     () => ({
       background: {
         color: {
-          value: "#0d47a1",
+          value: "#f8f6f4",
         },
       },
       fpsLimit: 120,
       interactivity: {
         events: {
           onClick: {
-            enable: true,
-            mode: "push",
+            enable: false,
           },
           onHover: {
-            enable: true,
-            mode: "repulse",
+            enable: false,
           },
         },
         modes: {
@@ -65,24 +61,18 @@ const App = () => {
       },
       particles: {
         color: {
-          value: "#ffffff",
+          value: "#202020",
         },
         links: {
-          color: "#ffffff",
-          distance: 150,
+          color: "#404742",
+          distance: 80,
           enable: true,
           opacity: 0.5,
           width: 1,
         },
         move: {
-          direction: MoveDirection.none,
           enable: true,
-          outModes: {
-            default: OutMode.out,
-          },
-          random: false,
-          speed: 6,
-          straight: false,
+          speed: 4,
         },
         number: {
           density: {
@@ -97,7 +87,7 @@ const App = () => {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 1, max: 3 },
         },
       },
       detectRetina: true,
@@ -117,3 +107,5 @@ const App = () => {
 
   return <></>;
 };
+
+export default App;
